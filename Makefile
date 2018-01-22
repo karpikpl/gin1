@@ -8,6 +8,8 @@ default: build
 
 build: install vet compile
 
+verify: fmt vet lint compile test
+
 compile:
 	go build -v -o ${DIR_BIN}/easiest \
 	-ldflags "-X main.Version=${VERSION}" \
@@ -43,4 +45,7 @@ vet:
 	go vet ${DIR_PKG}/... .
 
 run:
-	go run main.go
+	go run main.go -p=9000
+
+run-prod:
+	go run main.go -p=9000 -mode=release
