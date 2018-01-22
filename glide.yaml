@@ -1,0 +1,4 @@
+package: github.com/karpikpl/gin1
+import:
+- package: github.com/gin-gonic/gin
+  version: ^1.2.0
