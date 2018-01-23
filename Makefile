@@ -32,7 +32,7 @@ doc:
 
 # http://golang.org/cmd/go/#hdr-Run_gofmt_on_package_sources
 fmt:
-	go fmt ./...
+	gofmt -s -w .
 
 # https://github.com/golang/lint
 # go get github.com/golang/lint/golint
